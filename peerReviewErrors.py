@@ -2,7 +2,7 @@
 # You should read this header and insert your name and your date below as part of the peer review
 # This is a typical part of any program
 # Author: <James Butler>
-# Creation Date: <date>
+# Creation Date: <September 29, 2020>
 # Below is a simple program with 10 issues (some are syntax errors and some are logic errors.  You need to identify the issues and correct them.
 
 import random
@@ -16,22 +16,21 @@ def displayIntro():
 	print()
 
 def chooseCave():
-    cave = ''
+       cave = ''####indented cave###
 	while cave != '1' and cave != '2':
 		print('Which cave will you go into? (1 or 2)')
 		cave = input()
-
-	return caves
+	return cave###Removed extra line and changed caves to cave###
 
 def checkCave(chosenCave):
-	print('You approach the cave...')
+	print('You approach the cave...\n')####added new line.###
 	#sleep for 2 seconds
 	time.sleep(2)
-	print('It is dark and spooky...')
+	print('It is dark and spooky...\n')###added new line###
 	#sleep for 2 seconds
-	time.sleep(3)
-	print('A large dragon jumps out in front of you! He opens his jaws and...')
-	print()
+	time.sleep(2)###changed 3 to 2###
+	print('A large dragon jumps out in front of you! He opens his jaws and...\n')###added new line###
+	###removed print() line.###
 	#sleep for 2 seconds
 	time.sleep(2)
 	friendlyCave = random.randint(1, 2)
@@ -39,16 +38,16 @@ def checkCave(chosenCave):
 	if chosenCave == str(friendlyCave):
 		print('Gives you his treasure!')
 	else:
-		print 'Gobbles you down in one bite!'
+		print ('Gobbles you down in one bite!')###added parenthesis.###
 
 playAgain = 'yes'
-while playAgain = 'yes' or playAgain = 'y':
+while playAgain == 'yes' or playAgain == 'y':(changed = to ==.###
 	displayIntro()
-	caveNumber = choosecave()
-	checkCave(caveNumber)
+	chosenCave = chooseCave()###changed caveNumber to chosenCave and choosecave to chooseCave.###
+	chosenCave(caveNumber)###changed caveNumber to chosenCave.###
     
 	print('Do you want to play again? (yes or no)')
 	playAgain = input()
 	if playAgain == "no":
-		print("Thanks for planing")
+		print("Thanks for playing")###fixed spelling of playing.###
 
